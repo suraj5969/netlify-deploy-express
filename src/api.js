@@ -20,9 +20,11 @@ router.get("/route", (req, res) => {
   }
 });
 
-router.get("/test-route", async (req, res) => {  // got to baseuel/api/test-route you will see the result
+// to access below route go to localhost:9000/.netlify/functions/api/test-route
+router.get("/test-route", async (req, res) => {
+  // got to baseuel/api/test-route you will see the result
   try {
-    res.send({ name: "Test Route" });
+    res.json({ name: "Test Route" });
   } catch (err) {
     console.log(err);
     res.send("got error in catch block for test-route");
