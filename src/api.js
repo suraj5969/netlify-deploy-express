@@ -29,6 +29,6 @@ router.get("/test-route", async (req, res) => {  // got to baseuel/api/test-rout
   }
 });
 
-app.use("/api", router); // here we are making /api as base bath  for all routes
+app.use("/.netlify/functions/api", router); // here we are making /api as base bath  for all routes
 
 module.exports.handler = serverless(app); // strarts at 9000 port on local
